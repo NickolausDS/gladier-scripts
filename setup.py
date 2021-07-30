@@ -1,5 +1,6 @@
 import os
 from setuptools import setup, find_packages
+import glob
 
 # single source of truth for package version
 version_ns = {}
@@ -15,15 +16,18 @@ with open('requirements.txt') as reqs:
             continue
         install_requires.append(req)
 
+script_list = glob('scripts/*')
+
 setup(
-    name='gladier-client',
-    description='The Gladier Client Template',
-    url='https://github.com/globus-gladier/gladier-client-template',
+    name='gladier-scripts',
+    description='The Gladier Scripts',
+    url='https://github.com/globus-gladier/gladier-scripts',
     maintainer='The Gladier Team',
     maintainer_email='',
     version=version_ns['__version__'],
     packages=find_packages(),
     install_requires=install_requires,
+    scripts=script_list,
     dependency_links=[],
     license='Apache 2.0',
     classifiers=[

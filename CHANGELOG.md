@@ -1,4 +1,4 @@
-# Changes in gladier-client-template
+# Changes in gladier-scripts
 
 Below are major changes for each version Release. For detailed information,
 see the list of commits from the last version or use `git log`.
